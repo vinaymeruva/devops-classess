@@ -1,0 +1,56 @@
+[0:44 pm, 21/07/2021] Sai @rk Puram: <plugins>
+<plugin>
+        <groupId>org.apache.tomcat.maven</groupId>
+        <artifactId>tomcat7-maven-plugin</artifactId>
+        <version>2.2</version>
+        <configuration>
+            <url>http://3.143.25.138:8080/manager/text</url>
+            <server>tomcat</server>
+            <username>admin</username>
+            <password>password</password>
+            <path>/nopath</path>
+            <update>true</update>
+         </configuration>
+</plugin>
+            <plugin>
+[0:44 pm, 21/07/2021] Sai @rk Puram: <plugins>
+         <plugin>
+    <groupId>org.apache.tomcat.maven</groupId>
+    <artifactId>tomcat-maven-plugin</artifactId>
+    <version>2.2</version>
+    <configuration>
+        <url>http://3.141.228.58:8080/manager/</url>
+        <server>TomcatServer</server>
+        <path>/.m2</path>
+             <username>deployer</username>
+        <password>deployer</password>
+    </configuration>
+</plugin>
+[0:44 pm, 21/07/2021] Sai @rk Puram: <plugins>
+         <plugin>
+    <groupId>org.apache.tomcat.maven</groupId>
+    <artifactId>tomcat-maven-plugin</artifactId>
+    <version>2.2</version>
+    <configuration>
+        <url>http://3.141.228.58:8080/manager/</url>
+        <server>TomcatServer</server>
+        <path>/.m2</path>
+             <username>deployer</username>
+        <password>deployer</password>
+    </configuration>
+</plugin>
+[0:44 pm, 21/07/2021] Sai @rk Puram: <plugins>
+<plugin>
+        <groupId>org.apache.tomcat.maven</groupId>
+        <artifactId>tomcat7-maven-plugin</artifactId>
+        <version>2.2</version>
+        <configuration>
+            <url>http://3.143.25.138:8080/manager/text</url>
+            <server>tomcat</server>
+            <username>admin</username>
+            <password>password</password>
+            <path>/nopath</path>
+            <update>true</update>
+         </configuration>
+</plugin>
+            <plugin>

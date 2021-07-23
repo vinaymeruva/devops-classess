@@ -1,0 +1,108 @@
+ 1  cd /home
+    2  ls
+    3  cd ec2-user/
+    4  ls
+    5  mv jdk-8u291-linux-x64.tar.gz /opt
+    6  cd /opt
+    7  ls
+    8  tar -xvf jdk-8u291-linux-x64.tar.gz
+    9  ls
+   10  cd jdk1.8.0_291/
+   11  ls
+   12  alternatives --install /usr/bin/java java /opt/jdk1.8.0_291/bin/java 2
+   13  alternatives --config java
+   14  ls
+   15  cd /etc
+   16  ls
+   17  cd profile.d
+   18  touch java.sh
+   19  vi java.sh
+   20  echo $JAVA_HOME
+   21  source java.sh
+   22  echo $JAVA_HOME
+   23  cd /opt
+   24  yum install wget -y
+   25  wget https://archive.apache.org/dist/maven/maven-3/3.5.3/binaries/apache-maven-3.5.3-bin.tar.gz
+   26  ls
+   27  tar -xvf apache-maven-3.5.3-bin.tar.gz
+   28  ls
+   29  mvn -m
+   30  cd /etc
+   31  cd profile.d
+   32  ls
+   33  touch maven.sh
+   34  vi maven.sh
+   35  source maven.sh
+   36  vi maven.sh
+   37  source maven.sh
+   38  mvn -m
+   39  mvn -v
+   40  cd /opt
+   41  wget https://archive.apache.org/dist/tomcat/tomcat-8/v8.5.3/bin/
+   42  ls
+   43  wget https://archive.apache.org/dist/tomcat/tomcat-8/v8.5.3/bin/apache-tomcat-8.5.3.tar.gz
+   44  ls
+   45  tar -xvf apache-tomcat-8.5.3.tar.gz
+   46  ls
+   47  cd apache-tomcat-8.5.3
+   48  ls
+   49  cd bin
+   50  ls
+   51  sh startup.sh
+   52  nslookup www.flipkart.com
+   53  yum install bind-utils -y
+   54  ns lookup www.cricbuzz.com
+   55  nslookup www.cricbuzz.com
+   56  cd /opt
+   57  ls
+   58  cd apache-tomcat-8.5.3
+   59  ls
+   60  cd bin
+   61  ls
+   62  netstat -blunt |grep 8080
+   63  yum install netstat -y
+   64  yum install netstat-tools -y
+   65  sh startup.sh
+   66  yum install git -y
+   67  git clone https://github.com/RavitejaAdepudi/javawar.git
+   68  ls
+   69  cd javawar
+   70  ls
+   71  cd ..
+   72  mvn validate
+   73  cd javawar
+   74  ls
+   75  mvn validate
+   76  ls
+   77  mvn test
+   78  ls
+   79  mvn install
+   80  ls
+   81  cd target
+   82  ls
+   83  cd ..
+   84  ls
+   85  cd bin
+   86  ls
+   87  cd javawar
+   88  cd ..
+   89  cp -R target/* /opt/apache-tomcat-8.5.3/webapps/
+   90  cd bin
+   91  cd javawar
+   92  ls
+   93  cp target/* /opt/apache-tomcat-8.5.3/webapps
+   94  cd ..
+   95  cp -R /opt/apache-tomcat-8.5.3/bin/javawar/target/* /opt/apache-tomcat-8.5.3/webapps
+   96  cd webapps
+   97  ls
+   98  cd
+   99  cd /opt
+  100  ls
+  101  cd apache-tomcat-8.5.3
+  102  ls
+  103  cd logs
+  104  ls
+  105  cat catalina.out
+  106  cd ..
+  107  ls
+  108  history

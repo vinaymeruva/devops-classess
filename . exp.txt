@@ -1,0 +1,5 @@
+alternatives --install /usr/bin/java java /opt/jdk1.8.0_291/bin/java 2
+
+export JAVA_HOME=/opt/jdk1.8.0_291
+export JRE_HOME=/opt/jdk1.8.0_291/jre
+export PATH=$PATH:/opt/jdk1.8.0_291/bin:/opt/jdk1.8.0_291/jre/bin

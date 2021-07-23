@@ -1,0 +1,28 @@
+1.cd /opt
+2.wget --no-cookies --no-check-certificate --header "Cookie: gpw_e24=http%3A%2F%2Fwww.oracle.com%2F; oraclelicense=accept-securebackup-cookie" "https://download.oracle.com/otn-pub/java/jdk/8u201-b09/42970487e3af4f5aa5bca3f542482c60/jdk-8u201-linux-x64.tar.gz"
+3.tar xzf jdk-8u201-linux-x64.tar.gz
+4.cd jdk-8u201-linux-x6
+5. alternatives --install /usr/bin/java java /opt/jdk1.8.0_201/bin/java 2
+6.alternatives --config java
+7.cd /etc/profile.d/
+8.touch java.sh
+9. vi java.sh(export JAVA_HOME=/opt/jdk1.8.0_201
+export JRE_HOME=/opt/jdk1.8.0_201/jre
+export PATH=$PATH:/opt/jdk1.8.0_201/bin:/opt/jdk1.8.0_201/jre/bin)
+
+10.source java.sh
+11.java -version
+12. echo $JAVA_HOME
+
+============================================
+
+cd /opt
+https://archive.apache.org/dist/maven/maven-3/3.5.3/binaries/apache-maven-3.5.3-bin.tar.gz
+tar -xvf apache-maven-3.5.3-bin.tar.gz
+vi /etc/profile.d/
+touch maven.sh
+vi maven.sh (export MAVEN_HOME=/opt/apache-maven-3.5.3
+             export PATH=$PATH:/opt/apache-maven-3.5.3/bin)
+source maven.sh
+echo $MAVEN_HOME
+mvn -v
